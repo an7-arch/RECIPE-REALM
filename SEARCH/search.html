@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - Recipe Realm</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="tips.css" />
+    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="user.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../HOME/homepage.html">Home</a></li>
+          <li><a href="../SEARCH/search.html">Search</a></li>
+          <li><a href="../TIPS/tips.html">Tips</a></li>
+          <li><a href="../ABOUT US/about.html">About Us</a></li>
+          <li><a href="../CONTACT/contact.html">Contact</a></li>  
+          <li><a href="../FAQ/faq.html">FAQ</a></li>
+          <li><a href="../USER/user.html">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="header">
+      <h1>Recipe Realm</h1>
+      <p>Enter ingredients to find recipes that match !</p>
+    </div>
+
+    <main>
+      <div class="form-container">
+        <form id="ingredientForm">
+          <label for="ingredientInput">Add Ingredient:</label>
+          <input type="text" id="ingredientInput" placeholder="e.g., chicken" required>
+          <button type="button" id="addIngredientButton">+</button>
+          <div id="ingredientsList" class="ingredients-list"></div>
+          <button type="submit">Find Recipes</button>
+        </form>
+      </div>
+
+      <div id="recipeContainer" class="recipe-container">
+        <!-- Recipes will appear here -->
+      </div>
+    </main>
+
+    <div id="recipeModal" class="modal">
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+    
+
+    <footer>
+      <p>&copy; 2024 Recipe Realm. All Rights Reserved.</p>
+    </footer>
+
+    <script src="search.js"></script>
+  </body>
+</html>

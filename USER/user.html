@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Account - Recipe Realm</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="tips.css" />
+    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="user.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../HOME/homepage.html">Home</a></li>
+          <li><a href="../SEARCH/search.html">Search</a></li>
+          <li><a href="../TIPS/tips.html">Tips</a></li>
+          <li><a href="../ABOUT US/about.html">About Us</a></li>
+          <li><a href="../CONTACT/contact.html">Contact</a></li>  
+          <li><a href="../FAQ/faq.html">FAQ</a></li>
+          <li><a href="../USER/user.html">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>User Account</h1>
+
+      <!-- Login Section -->
+      <div id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input
+            type="text"
+            id="loginUsername"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+          <div class="button-group">
+            <button type="submit">Login</button>
+            <button type="button" id="createAccountButton">
+              Create Account
+            </button>
+          </div>
+        </form>
+        <p id="loginMessage"></p>
+      </div>
+
+      <!-- Create Account Section (Initially Hidden) -->
+      <div id="createAccountSection" style="display: none">
+        <h2>Create Account</h2>
+        <form id="createAccountForm">
+          <input
+            type="text"
+            id="newUsername"
+            placeholder="New Username"
+            required
+          />
+          <input type="email" id="newEmail" placeholder="Email" required />
+          <input
+            type="password"
+            id="newPassword"
+            placeholder="New Password"
+            required
+          />
+          <button type="submit">Create Account</button>
+        </form>
+        <p id="createAccountMessage"></p>
+      </div>
+
+      <!-- Profile Section (Visible After Login) -->
+      <div id="profileSection" style="display: none;">
+        <h2>Welcome, <span id="displayName"></span>!</h2><br>
+        <form id="updateProfileForm">
+        <label for="profileUsername">Username:</label>
+        <br>
+        <input type="text" id="profileUsername" required>
+        <br>
+        <label for="profileEmail">Email:</label>
+        <br>
+        <input type="email" id="profileEmail" required>
+
+        <button type="submit">Update Profile</button>
+        </form>
+        <button id="logoutButton">Logout</button>
+        <p id="profileMessage"></p>
+
+      <!-- Rate Us Section -->
+      <div id="rateUsSection">
+        <h3>Rate Us</h3>
+        <p>How would you rate your experience?</p>
+        <div class="rating">
+          <span data-rating="5">&#9733;</span>
+          <span data-rating="4">&#9733;</span>
+          <span data-rating="3">&#9733;</span>
+          <span data-rating="2">&#9733;</span>
+          <span data-rating="1">&#9733;</span>
+        </div>
+        <p id="rateUsMessage"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Recipe Realm. All Rights Reserved.</p>
+    </footer>
+
+    <script src="user.js"></script>
+  </body>
+</html>
